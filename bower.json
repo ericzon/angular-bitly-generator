@@ -1,0 +1,26 @@
+{
+  "name": "angular-bitly-generator",
+  "version": "0.0.2",
+  "homepage": "https://github.com/ericzon/angular-bitly-generator",
+  "authors": [
+    "Eric Lara <ericzon@gmail.com>"
+  ],
+  "description": "Lib created to generate bitly links on-the-fly. Two flavours: service and directive. Fallback: if it exceeds the rate limit, returns the original link. It has been tested with angular 1.2.x & 1.4.",
+  "main": "bitly-generator.js",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "bitly",
+    "angular.js",
+    "bit.ly",
+    "shortlink"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

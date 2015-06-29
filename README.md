@@ -4,6 +4,14 @@ Lib created to generate bitly links on-the-fly. Two flavours: service and direct
 Fallback: if it exceeds the rate limit, returns the original link. It has been tested with angular 1.2.x & 1.4.
 @See http://dev.bitly.com/rate_limiting.html
 
+## Installation:
+
+	bower install angular-bitly-generator
+
+	And then add the script to your main html file:
+
+	<script type="text/javascript" src="bitly-generator.js"></script>
+
 ## Configuration:
 
 	.config(['bitlyProvider', function (bitlyProvider) {
@@ -20,10 +28,10 @@ Fallback: if it exceeds the rate limit, returns the original link. It has been t
 **Example 1:**
 
 	<a href="http://www.ondho.com" bitly-generator>Ondho</a>
-	
+
 **Example 2:**
 
-	bitly.getShortUrl($rootScope.url).then(function(data){
+	bitly.getShortUrl(longUrl).then(function(data){
 		console.log("bit.ly DATA:", data);
 		$scope.bitlyUrl = data;
 		console.log("Bit.ly", $scope.bitlyUrl);
@@ -32,13 +40,14 @@ Fallback: if it exceeds the rate limit, returns the original link. It has been t
 		$scope.bitlyUrl = e;
 	});
 
-## Tests
-
-  not yet :(
 
 ## Dependencies
 
   None :)
+
+## Tests
+
+  not yet :(
 
 ## Contributing
 
@@ -55,4 +64,5 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Changelog
 
-* 0.0.1 Initial commit
+* 0.0.2 Added better documentation.
+  0.0.1 Initial commit
