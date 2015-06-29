@@ -2,6 +2,7 @@
 
 Lib created to generate bitly links on-the-fly. Two flavours: service and directive.
 Fallback: if it exceeds the rate limit, returns the original link. It has been tested with angular 1.2.x & 1.4.
+
 @See http://dev.bitly.com/rate_limiting.html
 
 ## Installation:
@@ -27,7 +28,7 @@ Fallback: if it exceeds the rate limit, returns the original link. It has been t
 
 **Example 1:**
 
-	<a href="http://www.ondho.com" bitly-generator>Ondho</a>
+	<a href="http://www.ondho.com" bitly-generator>Ondho</a> automagically it turns into: <a href="http://bit.ly/ondho">Ondho</a>
 
 **Example 2:**
 
@@ -47,7 +48,7 @@ Fallback: if it exceeds the rate limit, returns the original link. It has been t
 
 ## Tests
 
-  not yet :(
+  Not yet :(
 
 ## Contributing
 
@@ -64,5 +65,8 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Changelog
 
-* 0.0.2 Added better documentation.
+* 0.0.3 Trivial update.
+
+  0.0.2 Added better documentation.
+
   0.0.1 Initial commit
