@@ -9,9 +9,13 @@ Fallback: if it exceeds the rate limit, returns the original link. It has been t
 
 	bower install angular-bitly-generator
 
-	And then add the script to your main html file:
+	Add the script to your main html file:
 
 	<script type="text/javascript" src="bitly-generator.js"></script>
+
+	And then add the lib to your dependencies list:
+
+	angular.module('myCoolApp',[..., 'bitly.generator', ...])
 
 ## Configuration:
 
@@ -41,6 +45,8 @@ Fallback: if it exceeds the rate limit, returns the original link. It has been t
 		$scope.bitlyUrl = e;
 	});
 
+	... and then you can easily bind the result in your template. This case suits very well with the typical social share.
+
 
 ## Dependencies
 
@@ -65,7 +71,9 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Changelog
 
-* 0.0.3 Trivial update.
+* 0.0.4 Improved docs.
+
+  0.0.3 Trivial update.
 
   0.0.2 Added better documentation.
 
