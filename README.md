@@ -71,7 +71,9 @@ Add unit tests for any new or changed functionality. Lint and test your code.
 
 ## Changelog
 
-* 0.0.4 Improved docs.
+* 0.0.5 Add workaround for angular jsonp callbacks error.
+
+  0.0.4 Improved docs.
 
   0.0.3 Trivial update.
 

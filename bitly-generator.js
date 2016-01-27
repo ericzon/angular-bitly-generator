@@ -51,7 +51,7 @@
 						config.format = cfg.format || 'json';
 					},
 
-					$get: ['$http', '$q', function($http, $q){
+					$get: ['$http', '$q', '$window', function($http, $q, $window){
 
 						return {
 
@@ -72,12 +72,23 @@
 									okPath = "errorCode";
 									okCode = 0;
 								}
+								// start jsonp callbacks hack
+								/*
+								Problem: http://www.pixeldock.com/blog/working-with-jsonp-in-angularjs/
+								Hack: http://stackoverflow.com/questions/16560843/json-callback-not-found-using-jsonp
+								Discussion: https://github.com/angular/angular.js/issues/1551
+								*/
+								var c = $window.angular.callbacks.counter.toString(36);
+								$window['angularcallbacks_' + c] = function(data) {
+									$window.angular.callbacks['_' + c](data);
+									delete $window['angularcallbacks_' + c];
+								};
+								// end hack
 
 								var bitlyUrl = config.domain + urlPath + bitlyQuery;
-
 								$http.jsonp(bitlyUrl)
 									.success(function(response){
-										if(response[okPath] == okCode){
+										if(response && response[okPath] == okCode){
 											//console.log("bitly getShortUrl v"+config.version+" OK: ", response);
 											if(/^3/.test(config.version)){
 												deferredRequest.resolve(response.data.url);
