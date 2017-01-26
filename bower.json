@@ -5,7 +5,7 @@
   "authors": [
     "Eric Lara <ericzon@gmail.com>"
   ],
-  "description": "Lib created to generate bitly links on-the-fly. Two flavours: service and directive. Fallback: if it exceeds the rate limit, returns the original link. It has been tested with angular 1.2.x & 1.4.",
+  "description": "It generates bitly on-the-fly. 2 flavours: service & directive. If it exceeds the rate limit, returns original link. It works on v1.2 & 1.4",
   "main": "bitly-generator.js",
   "keywords": [
     "angular",
